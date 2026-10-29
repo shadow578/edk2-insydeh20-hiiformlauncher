@@ -1,0 +1,25 @@
+[Defines]
+  INF_VERSION                    = 0x00010005
+  BASE_NAME                      = HiiFormLauncher
+  FILE_GUID                      = 9B4C7E4B-2D85-4AF7-9E31-7B03BDFD3D91
+  MODULE_TYPE                    = UEFI_APPLICATION
+  VERSION_STRING                 = 1.0
+  ENTRY_POINT                    = ShellCEntryLib
+
+[Sources]
+  HiiFormLauncher.c
+
+[Packages]
+  MdePkg/MdePkg.dec
+  MdeModulePkg/MdeModulePkg.dec
+  ShellPkg/ShellPkg.dec
+
+[LibraryClasses]
+  HiiLib
+  MemoryAllocationLib
+  ShellCEntryLib
+  UefiBootServicesTableLib
+  UefiLib
+
+[Protocols]
+  gEfiFormBrowser2ProtocolGuid
